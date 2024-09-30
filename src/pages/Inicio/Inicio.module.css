@@ -1,4 +1,18 @@
 .container {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(282px, 1fr));
+    gap: 20px;
+    place-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, minmax(282px, 1fr));
+    }
+}
+
+@media screen  and (min-width: 768px) and (max-width: 1210px){
+    .container {
+        grid-template-columns: repeat(2, minmax(282px, 1fr));
+    }
 }
